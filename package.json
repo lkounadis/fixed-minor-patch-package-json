@@ -10,8 +10,11 @@
         "edit-json-file": "1.2.1",
         "minimist": "1.2.0"
     },
-    "bin": {
+    "scripts": {
         "fixed-minor-patch-package-json": "./index.js"
+    },
+    "bin": {
+        "fixed-minor-patch-package-json": "./bin/fixed-minor-patch-package-json"
     },
     "keywords": [
         "npm",
