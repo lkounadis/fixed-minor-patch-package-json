@@ -9,7 +9,14 @@ const bothDeps = !devDeps && !prodDeps;
 const createProdDep = prodDeps || bothDeps;
 const createDevDep = devDeps || bothDeps;
 
+const patchVersions = parsedArgs.patch && '~';
+const minorVersions = parsedArgs.minor && '^';
+const fixVersions = '';
+
 module.exports = {
     createProdDep,
-    createDevDep
+    createDevDep,
+    patchVersions,
+    minorVersions,
+    fixVersions,
 }

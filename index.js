@@ -1,6 +1,6 @@
 const EditJsonFile = require('edit-json-file');
 const packageJson = EditJsonFile(`./package.json`)
-const {createProdDep, createDevDep} = require('./args') 
+const {createProdDep, createDevDep, patchVersions, minorVersions, fixVersions} = require('./args') 
 
 const pipe = (...args) => () => args.reduce((acc, fn) => fn(acc),{})
 
@@ -16,9 +16,11 @@ const getNewPackageVersions = (dep) => Object.keys(dep).map(dep => {
     return { [dep]: getCurrentVersion(dep) }
 });
 
+const semver = patchVersions||minorVersions||fixVersions
+
 const setNewPackageJson = (type) => (dep) => {
     dep.forEach((package) => {
-        packageJson.set(`${type}.${Object.keys(package)[0]}`,Object.values(package)[0])
+        packageJson.set(`${type}.${Object.keys(package)[0]}`,`${semver}${Object.values(package)[0]}`)
     });
     packageJson.save()
 }
