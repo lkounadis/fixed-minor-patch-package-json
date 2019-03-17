@@ -4,7 +4,7 @@
     "description": "Fix, patch, minor dependencies and/or devDependencies from your currently installed package",
     "repository": "lkounadis/fixed-minor-patch-package-json",
     "license": "MIT",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "main": "index.js",
     "devDependencies": {
         "edit-json-file": "1.2.1",
