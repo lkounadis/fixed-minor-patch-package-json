@@ -1,4 +1,12 @@
 {
-    "name": "@lkounadjs/fixed-minor-patch-package-json",
-    "version": "1.0.0"
+    "name": "fixed-minor-patch-package-json",
+    "version": "1.0.0",
+    "main": "index.js",
+    "devDependencies": {
+        "edit-json-file": "1.2.1",
+        "minimist": "1.2.0"
+    },
+    "bin": {
+        "fixed-minor-patch-package-json": "./index.js"
+    }
 }
