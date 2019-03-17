@@ -1,6 +1,7 @@
 const EditJsonFile = require('edit-json-file');
 const packageJson = EditJsonFile(`./package.json`)
 const {createProdDep, createDevDep, patchVersions, minorVersions, fixVersions} = require('./args') 
+const chalk = require('chalk');
 
 const pipe = (...args) => () => args.reduce((acc, fn) => fn(acc),{})
 
@@ -19,10 +20,13 @@ const getNewPackageVersions = (dep) => Object.keys(dep).map(dep => {
 const semver = patchVersions||minorVersions||fixVersions
 
 const setNewPackageJson = (type) => (dep) => {
-    dep.forEach((package) => {
+    dep && dep.forEach((package) => {
         packageJson.set(`${type}.${Object.keys(package)[0]}`,`${semver}${Object.values(package)[0]}`)
     });
-    packageJson.save()
+    dep && packageJson.save(function(){
+        console.info(chalk.green(`Successfully updated ${type} in package.json`))
+    })
+    
 }
 
 const setNewPackageJsonProd = setNewPackageJson(PROD_DEPENDENCIES)
