@@ -1,35 +1,37 @@
 {
-    "name": "fixed-minor-patch-package-json",
-    "author": "Leandros Kounadis",
-    "description": "Fix, patch, minor dependencies and/or devDependencies from your currently installed package",
-    "repository": "lkounadis/fixed-minor-patch-package-json",
-    "license": "MIT",
-    "version": "1.0.5",
-    "main": "index.js",
-    "devDependencies": {
-        "chalk": "2.4.2",
-        "edit-json-file": "1.2.1",
-        "minimist": "1.2.0"
-    },
-    "scripts": {
-        "fixed-minor-patch-package-json": "./index.js"
-    },
-    "bin": {
-        "fixed-minor-patch-package-json": "./bin/fixed-minor-patch-package-json"
-    },
-    "keywords": [
-        "npm",
-        "package",
-        "dependencies",
-        "devdependencies",
-        "semver",
-        "fix",
-        "fixed",
-        "fix package",
-        "fixed package",
-        "fix depedencies",
-        "fixed depedencies",
-        "patch dependencies",
-        "minor depdendencies"
-    ]
+  "name": "fixed-minor-patch-package-json",
+  "author": "Leandros Kounadis",
+  "description": "Fix, patch, minor dependencies and/or devDependencies from your currently installed package",
+  "repository": "lkounadis/fixed-minor-patch-package-json",
+  "license": "MIT",
+  "version": "1.0.5",
+  "main": "index.js",
+  "dependencies": {
+    "edit-json-file": "1.2.1"
+  },
+  "devDependencies": {
+    "chalk": "2.4.2",
+    "minimist": "1.2.0"
+  },
+  "scripts": {
+    "fixed-minor-patch-package-json": "./index.js"
+  },
+  "bin": {
+    "fixed-minor-patch-package-json": "./bin/fixed-minor-patch-package-json"
+  },
+  "keywords": [
+    "npm",
+    "package",
+    "dependencies",
+    "devdependencies",
+    "semver",
+    "fix",
+    "fixed",
+    "fix package",
+    "fixed package",
+    "fix depedencies",
+    "fixed depedencies",
+    "patch dependencies",
+    "minor depdendencies"
+  ]
 }
