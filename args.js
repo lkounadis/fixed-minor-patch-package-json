@@ -1,5 +1,5 @@
 const args = process.argv;
-const parseArgs = require('minimist')
+const parseArgs = require('minimist');
 const parsedArgs = parseArgs(args);
 
 const devDeps = parsedArgs.dev;
@@ -19,4 +19,4 @@ module.exports = {
     patchVersions,
     minorVersions,
     fixVersions,
-}
+};
